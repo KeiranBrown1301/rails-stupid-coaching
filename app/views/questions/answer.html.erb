@@ -1,16 +1,23 @@
-<h1>Stupid Coaching</h1>
+<div class="container">
 
-<div>
-  <ol>
-    <ul><%= params[:question] %></ul>
-    <ul>- You</ul>
-  </ol>
+  <div class="banner">
+    <h1>Stupid Coaching</h1>
+    <p>Here's your answer!</p>
+  </div>
 
-  <ol>
-    <ul><%=  @answer  %></ul>
-    <ul>- Coach</ul>
-  </ol>
+  <div class="speaker">
+    <ol>
+      <ul><%= params[:question] %></ul>
+      <ul> - You</ul>
+    </ol>
+  </div>
+
+  <div class="coach">
+    <ol>
+      <ul><%=  @answer  %></ul>
+      <ul> - Coach</ul>
+    </ol>
+  </div>
 </div>
 
-<%= link_to 'Ask coach something else?', ask_path %>
-hello
+<%= link_to 'Ask coach something else?', ask_path,  :class => "link" %>
